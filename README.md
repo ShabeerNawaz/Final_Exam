@@ -74,6 +74,30 @@ Traffic Light Simulator
 </head>
 <body>
   <div id="root"></div>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const TrafficLightSimulator = () => {
+      const [activeLight, setActiveLight] = React.useState('red');
+
+      return (
+        <div>
+          <div className="traffic-light-container">
+            <div className={`light red ${activeLight === 'red' ? 'active' : ''}`} />
+            <div className={`light yellow ${activeLight === 'yellow' ? 'active' : ''}`} />
+            <div className={`light green ${activeLight === 'green' ? 'active' : ''}`} />
+          </div>
+        </div>
+      );
+    };
+
+    ReactDOM.render(
+      <TrafficLightSimulator />,
+      document.getElementById('root')
+    );
+  </script>
 
   
 </body>
