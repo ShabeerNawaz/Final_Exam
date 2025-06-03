@@ -81,6 +81,21 @@ Traffic Light Simulator
   <script type="text/babel">
     const TrafficLightSimulator = () => {
       const [activeLight, setActiveLight] = React.useState('red');
+      const [isAuto, setIsAuto] = React.useState(true);
+
+      React.useEffect(() => {
+        if (!isAuto) return;
+        
+        const interval = setInterval(() => {
+          setActiveLight(prev => {
+            if (prev === 'red') return 'yellow';
+            if (prev === 'yellow') return 'green';
+            return 'red';
+          });
+        }, 3000);
+
+        return () => clearInterval(interval);
+      }, [isAuto]);
 
       return (
         <div>
