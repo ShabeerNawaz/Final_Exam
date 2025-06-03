@@ -1,2 +1,80 @@
 # Final_Exam
-Exam work
+Traffic Light Simulator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Light Simulator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .traffic-light-container {
+      width: 140px;
+      background-color: #222;
+      padding: 30px 20px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .light {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+    }
+
+    .red {
+      background-color: #330000;
+    }
+
+    .yellow {
+      background-color: #333300;
+    }
+
+    .green {
+      background-color: #003300;
+    }
+
+    .red.active {
+      background-color: red;
+      box-shadow: 0 0 20px red;
+    }
+
+    .yellow.active {
+      background-color: yellow;
+      box-shadow: 0 0 20px yellow;
+    }
+
+    .green.active {
+      background-color: #00ff00;
+      box-shadow: 0 0 20px #00ff00;
+    }
+
+    .controls {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  
+</body>
+</html>
